@@ -1,0 +1,93 @@
+.container  {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    perspective: 1200px;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+}
+
+#cube   {
+    height: 400px;
+    width: 400px;
+    transform-style: preserve-3d;
+    transform: rotateX(-25deg) rotateY(35deg);
+    -webkit-transform-style:preserve-3d;
+    -moz-transform: rotateX(-25deg)rotateY(35deg);
+    -webkit-transform-style:preserve-3d;
+    -moz-transform: rotateX(-25deg)rotateY(35deg);
+}
+
+#cube div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+#face{
+    transform: translateZ(100px);
+    -webkit-transform: translateZ(100px);
+    -moz-transform: translateZ(100px);
+    background: white;
+    opacity: 0.8;
+}
+
+#dos{
+    transform: translateZ(-100px);
+    -webkit-transform: translateZ(-100px) 
+    -moz-transform-translateZ(-100px);
+    background: red;
+}
+
+#droite{
+        transform: rotateY(-90deg)translateZ(100px);
+        -webkit-transform: rotateY(-90deg) translateZ(100px);
+        -moz-transform: rotateY(-90deg) translateZ(100px);
+        background: blue;
+}
+
+#gauche{
+    transform: rotateY(90deg) translateZ(100px) ;
+    -webkit-transform: rotateY(90deg) translateZ(100px);
+    -moz-transform: rotateY(90deg) translateZ(100px);
+    background: grey;
+}
+
+#haut{
+    transform: rotateX(90deg) translateZ(100px) ;
+    -webkit-transform: rotateX(90deg) translateZ(100px);
+    -moz-transform: rotateX(90deg) translateZ(100px);
+    background: green;
+}
+
+#bas{
+    transform: rotateX(-90deg) translateZ(100px) ;
+    -webkit-transform: rotateX(-90deg) translateZ(100px);
+    -moz-transform:  rotateX(-90deg) translateZ(100px);
+    background: yellow;
+}
+
+#cube.rot{
+    animation: rotateCube 25s infinite ease-in-out;
+    -webkit-animation: rotateCube 25s infinite ease-in-out;
+    -moz-animation: rotateCube 25s infinite ease-in-out;
+}
+
+@-webkit-keyframes rotateCube {
+0% {transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+    -moz-transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+}
+
+50%{
+    transform: translateZ(-100px) rotateX(90deg) rotateY(90deg);
+    -webkit-transform: translateZ(-100px) rotateX(90deg) rotateY(90deg);
+    -moz-transform: translateZ(-100px) rotateX(90deg) rotateY(90deg);
+}
+
+100% {transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+    -webkit-transform: translateZ(-100px) rotateX(360deg) rotateY(3600deg);
+    -moz-transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+}
+
+}
